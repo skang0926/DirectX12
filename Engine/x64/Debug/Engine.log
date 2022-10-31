@@ -13,14 +13,16 @@
   Mesh.cpp
   MeshRenderer.cpp
   MonoBehaviour.cpp
+  Object.cpp
+  Resources.cpp
   RootSignature.cpp
   Scene.cpp
   SceneManager.cpp
   Shader.cpp
-  SimpleMath.cpp
-  SwapChain.cpp
   코드를 생성하고 있습니다...
   컴파일하고 있습니다...
+  SimpleMath.cpp
+  SwapChain.cpp
   TableDescriptorHeap.cpp
   TestCameraScript.cpp
   Texture.cpp

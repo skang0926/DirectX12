@@ -2,12 +2,11 @@ g:\etc\vs2022 project\directx12\engine\x64\debug\engine.pch
 g:\etc\vs2022 project\directx12\output\engine.pdb
 g:\etc\vs2022 project\directx12\output\engine.idb
 g:\etc\vs2022 project\directx12\engine\x64\debug\pch.obj
-g:\etc\vs2022 project\directx12\engine\x64\debug\swapchain.obj
-g:\etc\vs2022 project\directx12\engine\x64\debug\simplemath.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\shader.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\scenemanager.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\scene.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\rootsignature.obj
+g:\etc\vs2022 project\directx12\engine\x64\debug\object.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\monobehaviour.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\meshrenderer.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\mesh.obj
@@ -22,10 +21,6 @@ g:\etc\vs2022 project\directx12\engine\x64\debug\constantbuffer.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\component.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\commandqueue.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\camera.obj
-g:\etc\vs2022 project\directx12\engine\x64\debug\transform.obj
-g:\etc\vs2022 project\directx12\engine\x64\debug\timer.obj
-g:\etc\vs2022 project\directx12\engine\x64\debug\texture.obj
-g:\etc\vs2022 project\directx12\engine\x64\debug\tabledescriptorheap.obj
 g:\etc\vs2022 project\directx12\engine\x64\debug\engine.tlog\cl.command.1.tlog
 g:\etc\vs2022 project\directx12\engine\x64\debug\engine.tlog\cl.read.1.tlog
 g:\etc\vs2022 project\directx12\engine\x64\debug\engine.tlog\cl.write.1.tlog

@@ -2,6 +2,16 @@
 #include "Texture.h"
 #include "Engine.h"
 
+Texture::Texture() : Object(OBJECT_TYPE::TEXTURE)
+{
+
+}
+
+Texture::~Texture()
+{
+
+}
+
 void Texture::Init(const wstring& path)
 {
 	CreateTexture(path);
@@ -52,17 +62,14 @@ void Texture::CreateTexture(const wstring& path)
 	if (FAILED(hr))
 		assert(nullptr);
 
-	
 	::UpdateSubresources(RESOURCE_CMD_LIST.Get(),
 		_tex2D.Get(),
 		textureUploadHeap.Get(),
 		0, 0,
 		static_cast<unsigned int>(subResources.size()),
 		subResources.data());
-	
 
 	GEngine->GetCmdQueue()->FlushResourceCommandQueue();
-	
 }
 
 void Texture::CreateView()
