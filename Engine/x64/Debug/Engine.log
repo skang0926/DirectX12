@@ -1,0 +1,28 @@
+﻿  pch.cpp
+  CommandQueue.cpp
+  Component.cpp
+  ConstantBuffer.cpp
+  DepthStencilBuffer.cpp
+  Device.cpp
+  Engine.cpp
+  EnginePch.cpp
+  GameObject.cpp
+  Input.cpp
+  Material.cpp
+  Mesh.cpp
+  MeshRenderer.cpp
+  MonoBehaviour.cpp
+  RootSignature.cpp
+  Scene.cpp
+  SceneManager.cpp
+  Shader.cpp
+  SimpleMath.cpp
+  SwapChain.cpp
+  TableDescriptorHeap.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Texture.cpp
+  Timer.cpp
+  Transform.cpp
+  코드를 생성하고 있습니다...
+  Engine.vcxproj -> G:\etc\VS2022 project\DirectX12\Output\Engine.lib
