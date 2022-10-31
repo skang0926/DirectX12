@@ -1,4 +1,5 @@
 ﻿  pch.cpp
+  Camera.cpp
   CommandQueue.cpp
   Component.cpp
   ConstantBuffer.cpp
@@ -18,9 +19,10 @@
   Shader.cpp
   SimpleMath.cpp
   SwapChain.cpp
-  TableDescriptorHeap.cpp
   코드를 생성하고 있습니다...
   컴파일하고 있습니다...
+  TableDescriptorHeap.cpp
+  TestCameraScript.cpp
   Texture.cpp
   Timer.cpp
   Transform.cpp

@@ -22,7 +22,7 @@ void Engine::Init(const WindowInfo& info)
 	_tableDescHeap->Init(256);
 	_depthStencilBuffer->Init(_window);
 
-	CreateConstantBuffer(CBV_REGISTER::b0, sizeof(TransformMatrix), 256);
+	CreateConstantBuffer(CBV_REGISTER::b0, sizeof(TransformParams), 256);
 	CreateConstantBuffer(CBV_REGISTER::b1, sizeof(MaterialParams), 256);
 
 	ResizeWindow(info.width, info.height);
@@ -35,22 +35,18 @@ void Engine::Update()
 {
 	GET_SINGLE(Input)->Update();
 	GET_SINGLE(Timer)->Update();
+	GET_SINGLE(SceneManager)->Update();
 
 	Render();
 
 	ShowFps();
 }
 
-void Engine::LateUpdate()
-{
-	// TODO
-}
-
 void Engine::Render()
 {
 	RenderBegin();
 
-	GET_SINGLE(SceneManager)->Update();
+	GET_SINGLE(SceneManager)->Render();
 
 	RenderEnd();
 }
