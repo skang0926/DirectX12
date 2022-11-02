@@ -3,6 +3,8 @@
 */.vs
 *.vs
 */.vs/
+*/x64
+*/Client/x64
 # Precompiled Assets
 
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
