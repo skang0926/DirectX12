@@ -1,4 +1,5 @@
 #pragma once
+
 class GameObject;
 
 
@@ -24,3 +25,4 @@ public:
 private:
 	vector<shared_ptr<GameObject>> _gameObjects;
 };
+

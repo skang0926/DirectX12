@@ -10,7 +10,8 @@ ConstantBuffer::~ConstantBuffer()
 {
 	if (_cbvBuffer)
 	{
-		_cbvBuffer->Unmap(0, nullptr);
+		if (_cbvBuffer != nullptr)
+			_cbvBuffer->Unmap(0, nullptr);
 
 		_cbvBuffer = nullptr;
 	}
@@ -97,7 +98,6 @@ void ConstantBuffer::SetGlobalData(void* buffer, uint32 size)
 	::memcpy(&_mappedBuffer[0], buffer, size);
 	CMD_LIST->SetGraphicsRootConstantBufferView(0, GetGpuVirtualAddress(0));
 }
-
 
 D3D12_GPU_VIRTUAL_ADDRESS ConstantBuffer::GetGpuVirtualAddress(uint32 index)
 {

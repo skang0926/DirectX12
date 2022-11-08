@@ -1,5 +1,6 @@
 #include "pch.h"
-#include "Engine.h"
+#include "SwapChain.h"
+
 
 void SwapChain::Init(const WindowInfo& info, ComPtr<ID3D12Device> device, ComPtr<IDXGIFactory> dxgi, ComPtr<ID3D12CommandQueue> cmdQueue)
 {
@@ -20,6 +21,7 @@ void SwapChain::SwapIndex()
 
 void SwapChain::CreateSwapChain(const WindowInfo& info, ComPtr<IDXGIFactory> dxgi, ComPtr<ID3D12CommandQueue> cmdQueue)
 {
+	// 이전에 만든 정보 날린다
 	_swapChain.Reset();
 
 	DXGI_SWAP_CHAIN_DESC sd;
@@ -27,7 +29,7 @@ void SwapChain::CreateSwapChain(const WindowInfo& info, ComPtr<IDXGIFactory> dxg
 	sd.BufferDesc.Height = static_cast<uint32>(info.height); // 버퍼의 해상도 높이
 	sd.BufferDesc.RefreshRate.Numerator = 60; // 화면 갱신 비율
 	sd.BufferDesc.RefreshRate.Denominator = 1; // 화면 갱신 비율
-	sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM; // 버퍼의 디스플레이 형식, 현제 rgba 32 비트
+	sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM; // 버퍼의 디스플레이 형식
 	sd.BufferDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED;
 	sd.BufferDesc.Scaling = DXGI_MODE_SCALING_UNSPECIFIED;
 	sd.SampleDesc.Count = 1; // 멀티 샘플링 OFF
@@ -61,7 +63,7 @@ void SwapChain::CreateRTV(ComPtr<ID3D12Device> device)
 	rtvDesc.NodeMask = 0;
 
 	// 같은 종류의 데이터끼리 배열로 관리
-	// RTV 목록 : [     ] [ ]
+	// RTV 목록 : [ ] [ ]
 	device->CreateDescriptorHeap(&rtvDesc, IID_PPV_ARGS(&_rtvHeap));
 
 	D3D12_CPU_DESCRIPTOR_HANDLE rtvHeapBegin = _rtvHeap->GetCPUDescriptorHandleForHeapStart();

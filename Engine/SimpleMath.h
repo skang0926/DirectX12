@@ -366,7 +366,6 @@ namespace DirectX
             Vector4& operator/= (float S) noexcept;
             Vector4& operator=(const Vector3& V) noexcept { x = V.x; y = V.y; z = V.z; w = 0.f; return *this; }
 
-
             // Unary operators
             Vector4 operator+ () const noexcept { return *this; }
             Vector4 operator- () const noexcept;

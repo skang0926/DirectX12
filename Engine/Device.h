@@ -1,6 +1,7 @@
 #pragma once
 
 
+// 인력 사무소
 class Device
 {
 public:

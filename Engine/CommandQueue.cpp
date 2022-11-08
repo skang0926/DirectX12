@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CommandQueue.h"
+#include "SwapChain.h"
 #include "Engine.h"
 
 CommandQueue::~CommandQueue()
@@ -66,7 +67,6 @@ void CommandQueue::RenderBegin(const D3D12_VIEWPORT* vp, const D3D12_RECT* rect)
 
 	GEngine->GetConstantBuffer(CONSTANT_BUFFER_TYPE::TRANSFORM)->Clear();
 	GEngine->GetConstantBuffer(CONSTANT_BUFFER_TYPE::MATERIAL)->Clear();
-
 
 	GEngine->GetTableDescHeap()->Clear();
 

@@ -1,6 +1,5 @@
 ﻿// Client.cpp : 애플리케이션에 대한 진입점을 정의합니다.
 //
-
 #include "pch.h"
 #include "framework.h"
 #include "Client.h"
@@ -10,6 +9,7 @@
 
 // 전역 변수:
 WindowInfo GWindowInfo;
+
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
@@ -49,7 +49,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     GWindowInfo.height = 600;
     GWindowInfo.windowed = true;
 
-    std::unique_ptr<Game> game = std::make_unique<Game>();
+    unique_ptr<Game> game = make_unique<Game>();
     game->Init(GWindowInfo);
 
     // 기본 메시지 루프입니다:
@@ -60,14 +60,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
             if (msg.message == WM_QUIT)
                 break;
 
-            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
-            {
-                TranslateMessage(&msg);
-                DispatchMessage(&msg);
-            }
+			if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+			{
+				TranslateMessage(&msg);
+				DispatchMessage(&msg);
+			}
         }
 
-        // TODO
+		// TODO
         game->Update();
     }
 
