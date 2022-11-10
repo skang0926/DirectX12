@@ -25,6 +25,7 @@ public:
 	template<typename T>
 	OBJECT_TYPE GetObjectType();
 
+	shared_ptr<Mesh> LoadPointMesh();
 	shared_ptr<Mesh> LoadRectangleMesh();
 	shared_ptr<Mesh> LoadCubeMesh();
 	shared_ptr<Mesh> LoadSphereMesh();
@@ -108,3 +109,4 @@ inline OBJECT_TYPE Resources::GetObjectType()
 	else
 		return OBJECT_TYPE::NONE;
 }
+
