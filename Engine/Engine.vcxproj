@@ -251,6 +251,7 @@
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\..\대학\학습자료\인프런 강의 메모\강의자료\Particle+System_소스코드\Resources\Shader\particle.fx" />
+    <FxCompile Include="..\..\..\대학\학습자료\인프런 강의 메모\강의자료\Shadow+Mapping_소스코드\Resources\Shader\shadow.fx" />
     <FxCompile Include="..\Resources\Shader\compute.fx" />
     <FxCompile Include="..\Resources\Shader\deferred.fx" />
     <FxCompile Include="..\Resources\Shader\forward.fx" />

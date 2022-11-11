@@ -8,6 +8,7 @@ enum class SHADER_TYPE : uint8
 	LIGHTING,
 	PARTICLE,
 	COMPUTE,
+	SHADOW,
 };
 
 enum class RASTERIZER_TYPE : uint8
@@ -82,3 +83,4 @@ private:
 	ComPtr<ID3DBlob>					_csBlob;
 	D3D12_COMPUTE_PIPELINE_STATE_DESC   _computePipelineDesc = {};
 };
+
