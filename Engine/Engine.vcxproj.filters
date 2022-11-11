@@ -270,5 +270,8 @@
     <FxCompile Include="..\..\..\대학\학습자료\인프런 강의 메모\강의자료\Shadow+Mapping_소스코드\Resources\Shader\shadow.fx">
       <Filter>Shader</Filter>
     </FxCompile>
+    <FxCompile Include="..\Resources\Shader\tessellation.fx">
+      <Filter>Shader</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
